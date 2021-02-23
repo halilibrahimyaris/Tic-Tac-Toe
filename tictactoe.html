@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" sizes="192x192" href="images/castle.png">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-color: rgb(232, 255, 243);
+            height: 700px;
+
+        }
+
+
+        section {
+            display: block;
+            height: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .start {
+            text-align: center;
+           
+        }   
+
+        .gameArea {
+            display: inline-grid;
+            grid-template-columns: repeat(3, auto);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            width: 306px;
+            margin: 20px auto;
+
+        }
+        .restartGame{
+            font-family: cursive;
+            display: inline-block;
+            padding: 7px 14px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            background-color: #bd4a14;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 1px 4px  #7c2c07;
+            
+        }
+        .restartGame:active{
+            background-color: #bd4a14;
+            box-shadow: 1px 4px  #7c2c07;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            border-radius: 0px;
+            transform: translateY(4px);
+        }
+        .btn1 {
+            font-family: cursive;
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 25px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            background-color: rgb(232, 255, 243);
+            border: none;
+            border-radius: 15px;
+            background-color: rgb(232, 255, 243);
+            
+           
+            
+        }
+
+       .btn1:active {
+            background-color: rgb(232, 255, 243);
+            background-color: rgb(232, 255, 243);
+            transform: translateY(4px);
+        }
+
+        .cell {
+            font-family: "Permanent Marker", cursive;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #14bdac;
+            line-height: 100px;
+            font-size: 60px;
+            box-shadow: 3px 7px #14bdac5d;
+            
+        }
+
+        .cell:active {
+            background-color: #14bdac5d;
+            box-shadow: 0 5px #14bdac5d;
+            border-radius: 0px;
+            transform: translateY(4px);
+           
+
+        }
+
+        .scoreTableX,
+        .scoreTableO {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="start" id="startScreen">
+        
+        <h1 style="font-family:cursive;">Tic Tac Toe</h1>
+        <img src="images/startimg.png" id="startImg">
+        <h3 style="font-family:cursive;">Welcome to a compatitive game.</h3>
+        <h3 style="font-family:cursive;">Choose your mark and get start.</h3>
+        <p> <button class="btn1" style="font-family: 'Langar', cursive;" onclick="init()" id="btn2"><b>X</b></button>
+            <t><b>--</b></t>
+            <button class="btn1" style="font-family: 'Langar', cursive;" onclick="init2()" id="btn3"><b>O</b></button>
+        </p>
+    </div>
+
+    <section id="game" style="visibility: hidden">
+        <h1 style="font-family:cursive;">Tic Tac Toe</h1>
+        <div class="scoreTable">
+            <h2 class="scoreTableX"></h2>
+            <h2 class="scoreTableO"></h2>
+        </div>
+
+        <div class="gameArea">
+            <div id="cell0" cell-index="0" class="cell"></div>
+            <div id="cell1" cell-index="1" class="cell"></div>
+            <div id="cell2" cell-index="2" class="cell"></div>
+            <div id="cell3" cell-index="3" class="cell"></div>
+            <div id="cell4" cell-index="4" class="cell"></div>
+            <div id="cell5" cell-index="5" class="cell"></div>
+            <div id="cell6" cell-index="6" class="cell"></div>
+            <div id="cell7" cell-index="7" class="cell"></div>
+            <div id="cell8" cell-index="8" class="cell"></div>
+        </div>
+        <h2 class="gameStatus"></h2>
+        <button style="font-family:cursive;" class="restartGame">Restart Game</button>
+
+    </section>
+    <td>
+        <p>Developed by Halil İbrahim YARIŞ. &#169;</p>
+    </td>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
